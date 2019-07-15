@@ -1,0 +1,12 @@
+File too big to upload to Github. In this same directory there are two files serum-starved_half_1.rds and serum-starved_half_2.rds. 
+
+In R, first read in these two RDS files using 
+data1 <- readRDS("serum-starved_half_1.rds")
+data2 <- readRDS("serum-starved_half_2.rds")
+
+Then combine the two halves:
+data_total <- cbind(data1,data2)
+
+Then export a new RDS file into the data directory:
+saveRDS(data_total, "data/serum-starved.rds")
+
